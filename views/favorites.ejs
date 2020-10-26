@@ -1,0 +1,13 @@
+<h1>Favorite Pokemon</h1>
+<div id="container">
+  <ul>
+    <% favorites.forEach(pokemon=> { %>
+    <li>
+      <a
+        href="/pokemon/<%= pokemon.name.charAt(0).toLowerCase() + pokemon.name.slice(1) %>"
+        ><%= pokemon.name %></a
+      >
+    </li>
+    <% }) %>
+  </ul>
+</div>

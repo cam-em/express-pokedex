@@ -1,0 +1,30 @@
+<h1><%= data.name.charAt(0).toUpperCase() + data.name.slice(1) %></h1>
+<img src="<%= data.sprites.front_default %>" width="200" />
+
+<h3>Basic Info</h3>
+<ul>
+  <li><p>Height: <%= data.height %></p></li>
+  <li><p>Weight: <%= data.weight %></p></li>
+  <li><p>Base Experience: <%= data.base_experience %></p></li>
+</ul>
+
+<h3>Forms</h3>
+<ul>
+  <% data.forms.forEach(form=> { %>
+  <li><%= form.name %></li>
+  <% }) %>
+</ul>
+
+<h3>Abilities</h3>
+<ul>
+  <% data.abilities.forEach(ability => { %>
+  <li><%= ability.ability.name %></li>
+  <% }) %>
+</ul>
+
+<h3>Types</h3>
+<ul>
+  <% data.types.forEach(type => { %>
+  <li><%= type.type.name %></li>
+  <% }) %>
+</ul>
